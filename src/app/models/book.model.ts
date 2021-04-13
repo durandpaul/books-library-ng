@@ -1,5 +1,5 @@
 export interface IBook {
-    photo: string,
+    urlPicture?: string,
     synopsis: string,
     title: string,
     author: string

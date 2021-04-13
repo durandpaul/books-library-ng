@@ -11,10 +11,10 @@ export class AuthService {
   createNewUser(user) {
     return this.fireAuth.createUserWithEmailAndPassword(user.email, user.password).then(
       (user) => {
-        console.log('user created');
+        // console.log('user created');
       },
       (error) => {
-        throw new error;
+        throw new Error;
       }
     );
   }
@@ -22,10 +22,10 @@ export class AuthService {
   signInUser(user) {
     return this.fireAuth.signInWithEmailAndPassword(user.email, user.password).then(
       (user) => {
-        console.log('user connected');
+        // console.log('user connected');
       },
       (error) => {
-        throw new error;
+        throw new Error;
       }
     )
   }

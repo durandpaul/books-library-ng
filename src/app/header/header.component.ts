@@ -18,10 +18,8 @@ export class HeaderComponent implements OnInit {
     this.fireAuth.onAuthStateChanged(
       (user) => {
         if(user) {
-          console.log('onAuthStateChanged', true);
           this.isAuth = true;
         } else {
-          console.log('onAuthStateChanged', false);
           this.isAuth = false;
         }
       }
@@ -29,7 +27,6 @@ export class HeaderComponent implements OnInit {
   }
 
   onSignOut() {
-    console.log('onSignOut');
     this.authService.signOutUser();
   }
 
